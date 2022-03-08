@@ -7,10 +7,12 @@ before_install:
   - python --version
   - pip install -U pip
   
- install:
+# command to install dependencies
+install:
   - pip install -r requirements.txt
-
-scripts: pytest
+  - pip install .
+# command to run tests
+script: pytest
 
 deploy:
   provider: pypi
